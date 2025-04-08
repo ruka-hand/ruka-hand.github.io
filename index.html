@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RUKA: Rethinking the Design of Humanoid Hands with Learning">
+  <meta name="keywords" content="Reinforcement Learning, Robot Hand manipulation, Robot Learning, Dexterity Hands">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RUKA: Rethinking the Design of Humanoid Hands with Learning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--<script defer src="./static/js/fontawesome.all.min.js"></script>-->
+  <script src="https://kit.fontawesome.com/8a0d0cac45.js" crossorigin="anonymous"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RUKA: Rethinking the Design of Humanoid Hands with Learning</h1>
+            <div class="is-size-5 publication-authors" style="color: #f81f8b;">
+              <span class="author-block">
+                <a href="http://google.com" style="color: #f81f8b !important;">Jon Doe</a>,</span>
+              <span class="author-block">
+                <a href="http://google.com" style="color: #f81f8b !important;">Jon Doe</a>,
+              </span>
+              <span class="author-block">
+                <a href="http://google.com" style="color: #f81f8b !important;">Jon Doe</a>,
+              </span>
+              <span class="author-block">
+                <a href="http://google.com" style="color: #f81f8b !important;">Jon Doe</a>,</span>
+              <span class="author-block">
+                <a href="http://google.com" style="color: #f81f8b !important;">Jon Doe</a>,
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"> New York University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2410.23289" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                
+                <span class="link-block">
+                  <a href="https://github.com/irmakguzey/object-rewards/tree/main" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-solid fa-code"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://osf.io/frdc9/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-brands fa-github"></i>
+                    </span>
+                    <span>API</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://osf.io/frdc9/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </span>
+                    <span>Summary</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://osf.io/frdc9/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-solid fa-book"></i>
+                    </span>
+                    <span>Instruction</span>
+                  </a>
+                </span>
+
+                <!-- Put a new line-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered" style="margin-top: -40px;">
+        <div class="column is-four-fifths">
+        <!-- <div class="column"> -->
+          <div class="publication-video" style="margin-top: -24px; margin-bottom: 0;">
+            <!-- <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/hudor_compr_more.mp4" type="video/mp4">
+            </video> -->
+            <body>
+              <iframe width="800" height="449" src="https://www.youtube.com/embed/KX4aLrvh-04?si=cih6R3CiigYgA0fQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </body>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Dexterous manipulation is a fundamental capability
+              for robotic systems, yet progress has been limited by hardware
+              trade-offs between precision, compactness, strength, and afford-
+              ability. Existing control methods impose compromises on hand
+              designs and applications. However, learning-based approaches
+              present opportunities to rethink these trade-offs, particularly to
+              address challenges with tendon-driven actuation and low-cost
+              materials. 
+            </p>
+            <p>
+              This work presents RUKA, a tendon-driven humanoid
+              hand that is compact, affordable, and capable. Made from 3D-printed 
+              parts and off-the-shelf components, RUKA has 5 fingers
+              with 15 underactuated degrees of freedom enabling diverse
+              human-like grasps. Its tendon-driven actuation allows powerful
+              grasping in a compact, human-sized form factor. To address
+              control challenges, we learn joint-to-actuator and fingertip-to-
+              actuator models from motion-capture data collected by the
+              MANUS glove, leveraging the hand's morphological accuracy.
+              Extensive evaluations demonstrate RUKA's superior reachability,
+              durability, and strength compared to other robotic hands. Tele-
+              operation tasks further showcase RUKA's dexterous movements.
+              The open-source design and assembly instructions of RUKA, code,
+              and data are available on our website.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/method_video_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-centered">
+            <p>
+              <b>RUKA</b> generates rewards from human videos by tracking points on the manipulable object, 
+              indicated by the rainbow-colored dots, over the trajectory. 
+              This allows for online training of multi-fingered robot hands given only a single video of a human solving the task (left) 
+              and without robot teleoperation. To optimize the robot's policy (middle), 
+              rewards are computed by matching the point movements of the robot policy with those in the human video. 
+              In under an hour of online fine-tuning, our Allegro robot hand (right) is able to <i>open the music box</i>.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Rollouts</h2>
+          <div class="content">
+            <p>In the videos below you can see RUKA solve four various tasks</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Music Box Opening</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/music_box_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Paper Sliding</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/paper_sliding_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Bread Picking</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%"> 
+              <source src="./static/videos/bread_picking_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Card Sliding</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/card_sliding_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Generalization to New Objects</h2>
+          <div class="content">
+            <p>              Generalization experiments on Bread Picking and Card
+              Sliding task. We input the text prompts on top and bottom as input
+              to the language grounded SAM model to get the initial mask for
+              each object.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="text-align: center;" class="title is-4">Bread Picking Task</h3>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Dobby</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_dobby_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Brown Music Box</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_music_box_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Medicine Bottle</h4>
+              <video id="dollyzoom" controls muted loop playsinline height="100%">
+                <source src="./static/videos/gen_medicine_comp.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Red Peg</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_red_peg_comp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 style="text-align: center;" class="title is-4">Card Sliding Task</h3>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Gum Package</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_card_gum.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Small Plate</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_card_plate.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Brown Tissue</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_card_tissue.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-4">Yellow Tea Bag</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/gen_card_tea_bag.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Generalization to Larger Areas</h2>
+          <div class="content">
+            <p> To generalize to larger areas, we decouple object reaching from object manipulation. 
+              We determine the object's location relative to the robot using object detection
+              techniques and relative transforms, apply the same process to the human demonstration,
+              calculate the offset between the current and original object locations,
+              and integrate this offset into the policy trained with RUKA.
+              For simpler tasks, such as picking up bread, RUKA achieves an 85% success rate within an evaluation area of 40 cm x 50 cm. 
+              However, for more dexterous tasks, the success rate drops to around 40%.
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/spacial_gen_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="columns is-centered">
+         <div class="column is-full-width">
+          <h2 class="title is-3">Experiment Results</h2>
+          <div class="content">
+            <p> We ran experiments to answer the following two questions: 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content">
+            <!-- <h3 class="title is-4">Comparison Across Sensors -- Plug Insertion</h3> -->
+            <img src="./static/images/online_experiments.png" alt="Online Experiments" />
+            <p>
+              We compared RUKA to 3 different offline baselines. We ablate the input and the amount of demonstrations used to experiment on different aspects.
+              <b>RUKA</b> improves upon all of these offline baselines, showcasing the importance of online corrections for better dexterity.
+            </p>
+          </div>
+
+
+          <h3 style="text-align: center;" class="title is-4">How does the online finetuning improve the policy?</h3>
+          <div class="content">
+            <p>
+              We also illustrate below, how online learning improves the policy in the Paper Sliding task. 
+              As can be seen, <b>RUKA</b> enables the robot policy trajectory to move progressively closer to that of the human expert.
+            </p>
+            <img src="./static/images/website_trajectories_moving.png" alt="Trajectories Moving" />
+          </div>
+
+
+        </div>
+      </div>
+
+      <h3 style="text-align: center;" class="title is-4">Rollouts of Offline Baselines</h3>
+      <p>
+        We show the rollouts of our best offline baseline Point Cloud BC for three of our tasks below. 
+        Note how, in the Bread Picking and Paper Sliding tasks, the hand progressively lowers, 
+        while in the Card Sliding task, once the card is slid to the edge, the algorithm fails to recover.
+      </p>
+
+      <br>
+      
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Bread Picking Success</h4>
+             <!-- <p></p> -->
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_bread_picking_success.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Bread Picking Failure</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_bread_picking_failure.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Card Sliding</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_card_sliding.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <h4 class="title is-size-6">Paper Sliding</h4>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/point_cloud_bc_paper_sliding.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content">
+            <!-- <h3 class="title is-4">Comparison Across Sensors -- Plug Insertion</h3> -->
+            <img src="./static/images/reward_experiments.png" alt="Reward Experiments" />
+
+            <p>
+              In RUKA, we use points trajectory based reward functions to guide the online learning. 
+              We ablate over our design decision, and train online policies for three of our tasks with 
+              image representation based and points based reward functions. 
+            </p>
+            <p>
+              <b>RUKA</b> shows improvement over both of these baselines. 
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+         <h2 class="title is-3">Example Human Videos</h2>
+         <div class="content">
+           <p> We showcase how the human videos look like. Coupled with the corresponding hand poses,
+            note that this is the only offline data used to train robot policies.
+           </p>
+         </div>
+       </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Music Box Opening</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/music_box_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Card Sliding</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/card_sliding_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Bread Picking</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/bread_picking_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <h3 class="title is-4">Paper Sliding</h3>
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/paper_sliding_human_small.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="text-align: center;" class="title is-4">Object Trackings</h3>
+      <h4 style="text-align: center;" class="title is-size-6">Human Video Masks</h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_bread_picking_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_card_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_music_box_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/human_paper_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="text-align: center;" class="title is-size-6">Robot Video Masks</h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_bread_picking_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_card_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_music_box_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="dollyzoom" controls muted loop playsinline height="100%">
+              <source src="./static/videos/robot_paper_sliding_cotracker_vis.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
