@@ -59,7 +59,20 @@
 
 <body>
 
-
+  <!-- Coming Soon Modal -->
+  <div id="coming-soon-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <button class="delete is-large close-modal" aria-label="close"></button>
+        <div class="content has-text-centered">
+          <h3 class="title is-3" style="color: #f81f8b;">Coming Soon!</h3>
+          <p>This feature is currently under development.</p>
+          <p>Please check back later.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="hero-body">
@@ -95,7 +108,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="arxiv">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -105,7 +118,7 @@
 
                 
                 <span class="link-block">
-                  <a href="https://github.com/NYU-robot-learning/robot-hand-project" class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="code">
                     <span class="icon">
                       <i class="fa-solid fa-code"></i>
                     </span>
@@ -114,7 +127,7 @@
                 </span>
 
                 <span class="link-block">
-                  <a href="https://github.com/NYU-robot-learning/robot-hand-project/tree/main/robot_hand" class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="api">
                     <span class="icon">
                       <i class="fa-brands fa-github"></i>
                     </span>
@@ -123,7 +136,7 @@
                 </span>
 
                 <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="summary">
                     <span class="icon">
                       <i class="fa-brands fa-x-twitter"></i>
                     </span>
@@ -132,7 +145,7 @@
                 </span>
 
                 <span class="link-block">
-                  <a href="https://ruka.gitbook.io/robot-hand" class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="instruction">
                     <span class="icon">
                       <i class="fa-solid fa-book"></i>
                     </span>
@@ -387,7 +400,50 @@
       margin: 0;
       padding: 0;
     }
+
+    /* Modal styles */
+    .modal-content {
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
   </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all buttons with the show-modal class
+      const modalButtons = document.querySelectorAll('.show-modal');
+      const modal = document.getElementById('coming-soon-modal');
+      const closeModalButtons = document.querySelectorAll('.close-modal, .modal-background');
+      
+      // Add click event to each button
+      modalButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          modal.classList.add('is-active');
+        });
+      });
+      
+      // Add click event to close buttons
+      closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          modal.classList.remove('is-active');
+        });
+      });
+      
+      // Close modal when ESC key is pressed
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+          modal.classList.remove('is-active');
+        }
+      });
+    });
+  </script>
 
 </body>
 
