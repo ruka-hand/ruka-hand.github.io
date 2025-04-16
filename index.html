@@ -259,105 +259,225 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 style="margin-bottom: 1em ;" class="title is-3">Teleoperation</h2>
-          <div class="content">
-            <p>RUKA's teleoperation system integrates with OpenTeach to enable remote control through hand pose estimates from an Oculus Quest at a rate of 25Hz. The system maps human joint angles to the robot for the four main fingers while using fingertip positions for the thumb to account for morphological differences.</p>
-          </div>
+          <h2 style="margin-bottom: 0.5em ;" class="title is-3">Teleoperation</h2>
         </div>
       </div>
+      <!-- MoCap Gloves Section -->
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h4 style="margin-bottom: 1em ;" class="title is-5">MoCap Gloves</h4>
+            <div class="content">
+              <p>We use <a href="https://www.manus-meta.com/products/quantum-metagloves" style="color: #f81f8b !important;">Manus glove</a> to teleoperate the RUKA hand by streaming real-time fingertip positions, which are directly mapped to motor commands via learned controllers, enabling responsive and accurate hand movement replication.</p>
+            </div>
+          </div>
+        </div>
+        <div id="teleoperation-container">
+          <div class="columns is-centered has-text-centered is-mobile is-multiline">
+            <div class="column">
+              <div class="content has-text-centered">
+                <video controls muted loop playsinline autoplay width="100%">
+                  <source src="./static/videos/manus_teleop_org_fastened.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div id="teleoperation-container">
-        <div class="columns is-centered has-text-centered is-mobile is-multiline">
+        <div class="columns is-centered">
           <div class="column">
             <div class="content has-text-centered">
-              <video id="teleoperation-video" controls muted loop playsinline width="100%">
-                <source src="./static/videos/teleop.mp4" type="video/mp4">
+              <h4 class="title is-4">Screwdriver</h4>
+              <video controls muted loop playsinline autoplay width="100%">
+                <source src="./static/videos/screwdriver_2x_fastened.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Music Box</h4>
+              <video controls muted loop playsinline autoplay width="100%">
+                <source src="./static/videos/music_box_2x_fastened.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Eraser Flipping</h4>
+              <video controls muted loop playsinline autoplay width="100%">
+                <source src="./static/videos/eraser_flipping_2x_fastened.mp4" type="video/mp4">
               </video>
             </div>
           </div>
         </div>
-      </div>
-      <div class="columns is-centered">
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Water Bottle</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/water_bottle.mp4" type="video/mp4">
-            </video>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Battery</h4>
+              <video controls muted loop playsinline autoplay width="100%">
+                <source src="./static/videos/batter_2x_fastened.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Saw</h4>
+              <video controls muted loop playsinline autoplay width="100%">
+                <source src="./static/videos/saw_compatible.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">Nutella</h4>
+              <video controls muted loop playsinline autoplay width="100%">
+                <source src="./static/videos/nutella_5x_fastened.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Tennis Ball</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/tennis_ball.mp4" type="video/mp4">
-            </video>
+      </div> <!-- End of MoCap Gloves container -->
+
+      <!-- VR Headset Section (Moved Here) -->
+      <div class="container is-max-desktop" style="margin-top: 2rem;"> <!-- Added margin-top for spacing -->
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h4 style="margin-bottom: 1em ;" class="title is-5">VR Headset</h4>
+            <div class="content">
+              <p>RUKA's teleoperation system integrates with <a href="https://open-teach.github.io/" style="color: #f81f8b !important;">OpenTeach</a> to enable remote control through hand pose estimates from an Oculus Quest at a rate of 25Hz. The system maps human joint angles to the robot for the four main fingers while using fingertip positions for the thumb to account for morphological differences.</p>
+            </div>
           </div>
         </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Oven Open</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/oven_open.mp4" type="video/mp4">
-            </video>
+        <!-- Video Toggle Menu -->
+        <div class="tabs is-centered is-boxed" id="vr-video-tabs">
+          <ul>
+            <li class="is-active" data-target="video-water-bottle"><a>Water Bottle</a></li>
+            <li data-target="video-tennis-ball"><a>Tennis Ball</a></li>
+            <li data-target="video-oven-open"><a>Oven Open</a></li>
+            <li data-target="video-music-box"><a>Music Box</a></li>
+            <li data-target="video-drill-grasp"><a>Drill Grasp</a></li>
+            <li data-target="video-blue-cups-stack"><a>Stack Blue Cups</a></li>
+            <li data-target="video-orange-cup-rack"><a>Orange Cup Rack</a></li>
+            <li data-target="video-blue-cup-picking"><a>Pick Blue Cup</a></li>
+            <li data-target="video-blue-cup-flipping"><a>Flip Blue Cup</a></li>
+          </ul>
+        </div>
+
+        <!-- Video Display Area -->
+        <div id="vr-video-display">
+          <div class="video-content" id="video-water-bottle">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Water Bottle</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/water_bottle.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-tennis-ball" style="display: none;">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Tennis Ball</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/tennis_ball.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-oven-open" style="display: none;">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Oven Open</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/oven_open.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-music-box" style="display: none;">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Music Box</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/music_box.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-drill-grasp" style="display: none;">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Drill Grasp</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/drill_grasp.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-blue-cups-stack" style="display: none;">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Stack Blue Cups</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/blue_cups_stack.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-orange-cup-rack" style="display: none;">
+            <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Orange Cup Rack</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/orange_cup_rack.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-blue-cup-picking" style="display: none;">
+             <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Pick Blue Cup</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/blue_cup_picking.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-content" id="video-blue-cup-flipping" style="display: none;">
+             <div class="columns">
+              <div class="column">
+                <div class="content has-text-centered">
+                  <h4 class="title is-4">Flip Blue Cup</h4>
+                  <video controls muted loop playsinline autoplay width="100%">
+                    <source src="./static/videos/blue_cup_flipping.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="columns is-centered">
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Music Box</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/music_box.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Drill Grasp</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/drill_grasp.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Stack Blue Cups</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/blue_cups_stack.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-centered">
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Orange Cup Rack</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/orange_cup_rack.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Pick Blue Cup</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/blue_cup_picking.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <h4 class="title is-4">Flip Blue Cup</h4>
-            <video controls muted loop playsinline width="100%">
-              <source src="./static/videos/blue_cup_flipping.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
+      </div> <!-- End of VR Headset container -->
+
+    </div> <!-- End of main Teleoperation container -->
+  </section> <!-- End of Teleoperation section -->
 
   <!-- Method Section -->
   <section class="section">
@@ -383,7 +503,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <video id="data-collection-video" controls muted loop playsinline>
+              <video id="data-collection-video" controls muted loop playsinline autoplay>
                 <source src="./static/videos/data_collection_video.mp4" type="video/mp4">
               </video>
             </div>
@@ -404,7 +524,7 @@
           <div class="column">
             <div class="content has-text-centered">
               <!-- Placeholder for Video -->
-              <video controls muted loop playsinline>
+              <video controls muted loop playsinline autoplay>
                 <source src="./static/videos/durability.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -544,6 +664,20 @@
     .modal-content .content p {
       font-size: 0.9em;
     }
+
+    /* Custom styles for VR Video Tabs */
+    #vr-video-tabs.tabs.is-boxed li.is-active a {
+      background-color: #ffffff; /* Pink background */
+      border-color: #ffffff;     /* Pink border */
+      color: #f81f8b;            /* White text */
+    }
+
+    #vr-video-tabs.tabs.is-boxed li.is-active a:hover {
+      background-color: #ffffff; /* Slightly darker pink on hover */
+      border-color: #ffffff;
+      color: #f81f8b;
+
+    }
   </style>
 
   <script>
@@ -573,6 +707,37 @@
         if (e.key === 'Escape' && modal.classList.contains('is-active')) {
           modal.classList.remove('is-active');
         }
+      });
+
+      // VR Video Tabs Logic
+      const vrVideoTabs = document.querySelectorAll('#vr-video-tabs li');
+      const vrVideoContents = document.querySelectorAll('#vr-video-display .video-content');
+
+      vrVideoTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Deactivate all tabs
+          vrVideoTabs.forEach(item => item.classList.remove('is-active'));
+          // Hide all video contents
+          vrVideoContents.forEach(content => content.style.display = 'none');
+
+          // Activate clicked tab
+          tab.classList.add('is-active');
+          // Show corresponding video content
+          const targetId = tab.getAttribute('data-target');
+          const targetContent = document.getElementById(targetId);
+          if (targetContent) {
+            targetContent.style.display = 'block';
+            // Optional: Pause other videos when switching
+            vrVideoContents.forEach(content => {
+              if (content.id !== targetId) {
+                const video = content.querySelector('video');
+                if (video) {
+                  video.pause();
+                }
+              }
+            });
+          }
+        });
       });
     });
   </script>
