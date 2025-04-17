@@ -298,7 +298,7 @@
         <div class="columns is-centered">
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Screwdriver</h4>
+              <h4 class="title is-4">Screwdriver <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/screwdriver_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -306,7 +306,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Music Box</h4>
+              <h4 class="title is-4">Music Box <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/music_box_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -315,7 +315,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Eraser Flipping</h4>
+              <h4 class="title is-4">Eraser Flipping <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/eraser_flipping_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -325,7 +325,7 @@
         <div class="columns is-centered">
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Battery</h4>
+              <h4 class="title is-4">Battery <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/batter_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -333,7 +333,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Saw</h4>
+              <h4 class="title is-4">Saw <span class="speed-note">(1x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/saw_compatible.mp4" type="video/mp4">
               </video>
@@ -341,7 +341,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Nutella</h4>
+              <h4 class="title is-4">Nutella <span class="speed-note">(5x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/nutella_5x_fastened.mp4" type="video/mp4">
               </video>
@@ -566,7 +566,7 @@
           <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Learning - HuDOR</h2>
           <div class="content">
             <p>
-              RUKA uses <a href="https://object-rewards.github.io/" style="color: #f81f8b !important;">HuDOR</a>, an imitation‐learning framework that converts in‐scene human videos into open‐loop robot replays and learns a residual motor‐position policy. Applied to Cube Flipping and Bread Pick‑and‑Drop, each policy converged in ∼45 min over 40 episodes by matching object‐centroid trajectories and finetuning performance
+              We used RUKA to train autonomous policies using <a href="https://object-rewards.github.io/" style="color: #f81f8b !important;">HuDOR</a>, an imitation‐learning framework that converts in‐scene human videos into open‐loop robot replays and learns a residual motor‐position policy. Applied to Cube Flipping and Bread Pick‑and‐Drop, each policy converged in ∼45 min over 40 episodes by matching object‐centroid trajectories and finetuning performance
             </p>
           </div>
         </div>
@@ -637,6 +637,24 @@
     </div>
   </section>
   
+  <!-- BibTeX Section
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 style="margin-bottom: 1em;" class="title is-3">Citation</h2>
+          <div class="content">
+            <pre class="bibtex-box"><code>@article{zorin2024ruka,
+  title={RUKA: Rethinking the Design of Humanoid Hands with Learning},
+  author={Zorin, Anya and Guzey, Irmak and Yan, Billy and Iyer, Aadhithya and Kondrich, Lisa and Bhattasali, Nikhil X. and Pinto, Lerrel},
+  journal={arXiv preprint},
+  year={2024}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <footer class="footer">
     <div class="container">
@@ -748,6 +766,23 @@
       border-color: #ffffff;
       color: #f81f8b;
 
+    }
+
+    /* Speed note styling */
+    .speed-note {
+      font-size: 0.8em;
+      color: #f81f8b;
+      font-weight: normal;
+    }
+    
+    /* BibTeX box styling */
+    .bibtex-box {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: monospace;
+      white-space: pre-wrap;
     }
   </style>
 
