@@ -124,14 +124,14 @@
                   </a>
                 </span>
 
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="api">
                     <span class="icon">
                       <i class="fa-brands fa-github"></i>
                     </span>
                     <span>API</span>
                   </a>
-                </span>
+                </span> -->
 
                 <span class="link-block">
                   <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="summary">
@@ -143,19 +143,27 @@
                 </span>
 
                 <span class="link-block">
-                  <a href="https://ruka.gitbook.io/robot-hand" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://ruka.gitbook.io/instructions" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fa-solid fa-book"></i>
                     </span>
                     <span>Assembly</span>
                   </a>
                 </span>
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="summary">
                     <span class="icon">
                       <i class="fa-brands fa-discord"></i>
                     </span>
                     <span>Discord</span>
+                  </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="https://cad.onshape.com/documents/6be13b87a3aad01bd61ef6ab/w/86f8cbb4c7b89f36daabaded/e/5b18eb8a388f7b1857d3fdb3" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <img src="static/images/onshape_logo.png" alt="Onshape" style="height: 1.2em;">
+                    </span>
+                    <span>CAD</span>
                   </a>
                 </span>
 
@@ -176,7 +184,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div class="publication-video">
-            <iframe width="800" height="449" src="https://www.youtube.com/embed/KX4aLrvh-04?si=cih6R3CiigYgA0fQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="800" height="449" src="https://www.youtube.com/embed/RXzUEl60vWg?si=qlHB6MxHVgynqadM " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -223,9 +231,9 @@
         <div class="column is-full-width">
           <h2 style="margin-bottom: 1em ;" class="title is-3">Hardware</h2>
           <div class="content">
-            <p>
+            <h5>
               The Ruka hand costs less than <span style="color: #f81f8b;">$1300</span> and can be assembled in under <span style="color: #f81f8b;">7 hours</span> with common hand tools.
-            </p>
+            </h5>
           </div>
         </div>
       </div>
@@ -235,7 +243,8 @@
         <!-- Left Column: Sketchfab Embed -->
         <div class="column is-two-fifths">
           <div class="content has-text-centered">
-            <div class="sketchfab-embed-wrapper"> <iframe title="RUKA Robot Hand Full Assembly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="300" height="480" src="https://sketchfab.com/models/06b8f8ee77b143c9be46b06e7558cbfb/embed"> </iframe> </div>
+            <div class="sketchfab-embed-wrapper"> <iframe title="RUKA Robot Hand Full Assembly" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="380" height="620" src="https://sketchfab.com/models/06b8f8ee77b143c9be46b06e7558cbfb/embed?ui_theme=dark"> </iframe> </div>
+            
           </div>
         </div>
         <!-- Right Column: GIFs Stacked Vertically -->
@@ -246,19 +255,23 @@
           <div class="content has-text-centered">
             <img src="./static/gif/finger_springs_screws_assembly.gif" alt="Finger Springs and Screws Assembly GIF" style="max-width: 60%; height: auto;">
           </div>
+          <div class="content has-text-centered">
+            <video muted loop playsinline autoplay width="100%">
+              <source src="./static/videos/assembly_vid.mp4" type="video/mp4" style="max-width: 60%; height: auto;">
+            </video>
+          </div>
         </div>
       </div>
       
       <div class="columns is-centered">
         <div class="column is-full-width">
           <div class="content">
-            <p>
-              RUKA has excellent reachability, executing 29 out of 33 standard GRASP taxonomy grasps. In performance testing, RUKA outperforms commercial and opensource alternatives - with a 6.0 kg payload capacity compared to LEAP's 4.0 kg and Allegro's 3.6 kg. RUKA demonstrates superior pinch force (2.74 N) and finger strength at both DIP/PIP joints (33.02 N) and MCP joints (16.15 N). 
-              The hand operates continuously for 20+ hours without significant performance degradation, with temperatures stabilizing during extended use.
-            </p>
-            <p>
-              For more instructions on hardware assembly, please visit our <a href="https://ruka.gitbook.io/robot-hand" style="color: #f81f8b;">Technical Documentation</a>.
-            </p>
+            <!-- <p>
+              RUKA has a $1300, $900, and $500 version with different actuators. 
+            </p> -->
+            <h5>
+              For the instructions on hardware assembly, please visit <a href="https://ruka.gitbook.io/instructions" style="color: #f81f8b;">ruka.gitbook.io/instructions</a>.
+            </h5>
           </div>
         </div>
       </div>
@@ -277,9 +290,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h4 style="margin-bottom: 1em ;" class="title is-5">MoCap Gloves</h4>
             <div class="content">
-              <p>We use <a href="https://www.manus-meta.com/products/quantum-metagloves" style="color: #f81f8b !important;">Manus glove</a> to teleoperate the RUKA hand by streaming real-time fingertip positions, which are directly mapped to motor commands via learned controllers, enabling responsive and accurate hand movement replication.</p>
+              <h3 style="margin-bottom: 1em ;" class="title is-4"><a href="https://www.manus-meta.com/products/quantum-metagloves" style="color: #f81f8b !important;">MANUS MoCap Gloves</a> teleoperation with ArUco Markers for robot arm teleoperation
+              </h3>
             </div>
           </div>
         </div>
@@ -298,7 +311,7 @@
         <div class="columns is-centered">
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Screwdriver <span class="speed-note">(2x)</span></h4>
+              <h4 class="title is-5">Screwdriver <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/screwdriver_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -306,7 +319,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Music Box <span class="speed-note">(2x)</span></h4>
+              <h4 class="title is-5">Music Box <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/music_box_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -315,7 +328,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Eraser Flipping <span class="speed-note">(2x)</span></h4>
+              <h4 class="title is-5">Eraser Flipping <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/eraser_flipping_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -325,7 +338,7 @@
         <div class="columns is-centered">
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Battery <span class="speed-note">(2x)</span></h4>
+              <h4 class="title is-5">Battery <span class="speed-note">(2x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/batter_2x_fastened.mp4" type="video/mp4">
               </video>
@@ -333,7 +346,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Saw <span class="speed-note">(1x)</span></h4>
+              <h4 class="title is-5">Saw <span class="speed-note">(1x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/saw_compatible.mp4" type="video/mp4">
               </video>
@@ -341,7 +354,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <h4 class="title is-4">Nutella <span class="speed-note">(5x)</span></h4>
+              <h4 class="title is-5">Nutella <span class="speed-note">(5x)</span></h4>
               <video controls muted loop playsinline autoplay width="100%">
                 <source src="./static/videos/nutella_5x_fastened.mp4" type="video/mp4">
               </video>
@@ -354,10 +367,9 @@
       <div class="container is-max-desktop" style="margin-top: 2rem;"> <!-- Added margin-top for spacing -->
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h4 style="margin-bottom: 1em ;" class="title is-5">VR Headset</h4>
-            <div class="content">
-              <p>RUKA's teleoperation system integrates with <a href="https://open-teach.github.io/" style="color: #f81f8b !important;">OpenTeach</a> to enable remote control through hand pose estimates from an Oculus Quest at a rate of 25Hz. The system maps human joint angles to the robot for the four main fingers while using fingertip positions for the thumb to account for morphological differences.</p>
-            </div>
+            <h3 style="margin-bottom: 1em ;" class="title is-4">VR Headset for teleoperation with <a href="https://open-teach.github.io/" style="color: #f81f8b !important;">OpenTeach</a>
+            </h3>
+           
           </div>
         </div>
         <!-- Video Toggle Menu -->
@@ -496,7 +508,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h2 style="margin-bottom: 1em ;" class="title is-3">Method</h2>
+          <h2 style="margin-bottom: 1em ;" class="title is-3">Controller Learning</h2>
           <div class="content">
             <p>
               RUKA employs a data-driven approach to control its tendon-driven mechanism by attaching motion-capture gloves to collect fingertip positions and joint angles. 
@@ -510,7 +522,7 @@
         <div class="columns is-centered has-text-centered is-mobile is-multiline">
           <div class="column">
             <div class="content has-text-centered">
-              <img id="data-collection-image" src="./static/images/method_arch.png" alt="Data Collection">
+              <img id="data-collection-image" src="./static/images/controller_training.png" alt="Data Collection">
             </div>
           </div>
           <div class="column">
