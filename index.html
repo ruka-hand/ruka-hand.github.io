@@ -106,7 +106,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark show-modal" data-target="arxiv">
+                  <a href="https://arxiv.org/abs/2504.13165" class="external-link button is-normal is-rounded is-dark" data-target="arxiv">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -291,7 +291,7 @@
         <div class="columns is-centered">
           <div class="column is-full-width">
             <div class="content">
-              <h3 style="margin-bottom: 1em ;" class="title is-4"><a href="https://www.manus-meta.com/products/quantum-metagloves" style="color: #f81f8b !important;">MANUS MoCap Gloves</a> teleoperation with ArUco Markers for robot arm teleoperation
+              <h3 style="margin-bottom: 1em ;" class="title is-4"><a href="https://www.manus-meta.com/products/quantum-metagloves" style="color: #f81f8b !important;">MANUS MoCap Glove</a> teleoperation
               </h3>
             </div>
           </div>
@@ -406,7 +406,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Tennis Ball</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/tennis_ball.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -418,7 +418,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Oven Open</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/oven_open.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -430,7 +430,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Music Box</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/music_box.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -442,7 +442,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Drill Grasp</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/drill_grasp.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -454,7 +454,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Stack Blue Cups</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/blue_cups_stack.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -466,7 +466,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Orange Cup Rack</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/orange_cup_rack.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -478,7 +478,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Pick Blue Cup</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/blue_cup_picking.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -490,7 +490,7 @@
               <div class="column">
                 <div class="content has-text-centered">
                   <h4 class="title is-4">Flip Blue Cup</h4>
-                  <video controls muted loop playsinline autoplay width="100%">
+                  <video controls muted loop playsinline width="100%">
                     <source src="./static/videos/blue_cup_flipping.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -510,10 +510,9 @@
         <div class="column is-full-width">
           <h2 style="margin-bottom: 1em ;" class="title is-3">Controller Learning</h2>
           <div class="content">
-            <p>
-              RUKA employs a data-driven approach to control its tendon-driven mechanism by attaching motion-capture gloves to collect fingertip positions and joint angles. 
-              The collected data trains separate neural network controllers for each finger, mapping desired fingertip positions or joint angles to motor commands with precision under 8mm in fingertip positioning. 
-            </p>
+            <h5>
+              RUKA uses data and learning to address control. It learns per-finger controllers that map fingertip positions to motor commands using data collected with motion-capture gloves.
+            </h5>
           </div>
         </div>
       </div>
@@ -527,7 +526,7 @@
           </div>
           <div class="column">
             <div class="content has-text-centered">
-              <video id="data-collection-video" controls muted loop playsinline autoplay>
+              <video id="data-collection-video" muted loop playsinline autoplay>
                 <source src="./static/videos/data_collection_video.mp4" type="video/mp4">
               </video>
             </div>
@@ -547,8 +546,11 @@
         <div class="columns is-vcentered">
           <div class="column">
             <div class="content has-text-centered">
+              <h5>
+                RUKA can run for 20 hours without overheating.
+              </h5>
               <!-- Placeholder for Video -->
-              <video controls muted loop playsinline autoplay>
+              <video muted loop playsinline autoplay>
                 <source src="./static/videos/durability.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -557,12 +559,13 @@
           
           <div class="column">
             <div class="content">
-              <p>
-                RUKA exhibited high mechanical robustness and actuation strength. After 20 hours of continuous operation, it showed no motor precision degradation, and thermal readings stabilized below 55°C. Strength testing confirmed a 2.74 N mean pinch force, a 6.0 kg maximum payload, and joint slip resistances of 33.02 N (DIP/PIP) and 16.15 N (MCP).
-              </p>
+              <h5>
+                RUKA outperforms other hands in strength tests.
+              </h5>
               <!-- Image for Strength Test -->
-              <img src="./static/images/temperature_test.png" alt="Strength Test Demonstration" width="100%">
+              
               <img src="./static/images/strength_test.png" alt="Strength Test Demonstration" width="100%">
+              <img src="./static/images/strength_table.png" alt="Strength Test Demonstration" width="100%">
               <!-- Placeholder for Text -->
             </div>
           </div>
@@ -577,9 +580,10 @@
         <div class="column is-full-width">
           <h2 style="margin-bottom: 1em ;" class="title is-3">Policy Learning - HuDOR</h2>
           <div class="content">
-            <p>
-              We used RUKA to train autonomous policies using <a href="https://object-rewards.github.io/" style="color: #f81f8b !important;">HuDOR</a>, an imitation‐learning framework that converts in‐scene human videos into open‐loop robot replays and learns a residual motor‐position policy. Applied to Cube Flipping and Bread Pick‑and‐Drop, each policy converged in ∼45 min over 40 episodes by matching object‐centroid trajectories and finetuning performance
-            </p>
+            <h5>
+              We used RUKA to train autonomous policies using <a href="https://object-rewards.github.io/" style="color: #f81f8b !important;">HuDOR</a>. Learned residual motor policies converged in 45 mins over 40 episodes.
+              
+            </h5>
           </div>
         </div>
       </div>
